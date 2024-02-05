@@ -1,0 +1,72 @@
+Relational Databases:
+
+Structure: They use a tabular data model with tables containing rows and columns.
+Fixed Schema: The database structure is defined by a fixed schema that specifies the relationships between tables.
+Query Language: Structured Query Language (SQL) is used for operations and queries.
+Vertical Scalability: To scale, it usually involves increasing hardware capacity (e.g., adding more processing power or memory to a server).
+Document Databases:
+
+Structure: Data is stored in document format (such as JSON or BSON), which can contain structured or unstructured information.
+Dynamic Schema: There is no fixed schema, allowing documents with different structures in the same database.
+Query Language: Document-based queries are used, often integrating with programming languages (e.g., MongoDB uses JSON-based document queries).
+Horizontal Scalability: They are often better suited for horizontal scalability, distributing data across multiple servers to handle large volumes of 
+information.
+
+General Considerations:
+
+Flexibility: Document databases are more flexible in terms of schema, making them ideal for situations where data requirements may change over time.
+Performance: Document databases can be more efficient for certain types of queries and operations due to their document-based structure.
+Use Cases: Relational databases are commonly used in applications requiring complex transactions and defined relationships, while document databases are popular in environments where data structure may vary, and greater flexibility is needed.
+
+
+
+About MongoDB
+Data Model:
+
+Document-Oriented: MongoDB stores data in BSON (Binary JSON) documents, which are binary representations of JSON documents. 
+These documents can contain structured or unstructured data.
+
+Structure and Schema:
+
+Dynamic Schema: It does not have a fixed schema, meaning different documents in the same collection can have different structures. 
+This provides flexibility to change the data structure without modifying a predefined schema.
+
+Query Language:
+
+Document-Based Query: MongoDB uses document-based queries that resemble JSON syntax. 
+This makes it easy to search and manipulate data, especially for developers familiar with JSON format.
+
+Scalability:
+
+Horizontal Scalability: MongoDB is known for its horizontal scalability, allowing you to distribute data across multiple 
+servers to handle large volumes of information and improve performance.
+
+Indexes:
+
+Index Support: MongoDB allows the creation of indexes to enhance query performance. 
+You can create indexes on one or multiple fields to accelerate data retrieval.
+
+Transactions:
+
+Transaction Support: In more recent versions, MongoDB has introduced support for transactions, enabling atomic operations across multiple documents.
+
+Agile Development Usage:
+
+Suitable for Agile Development: MongoDB is popular in agile development environments due to its flexibility and ease of adaptation to changes 
+in data requirements.
+
+Community and Ecosystem:
+
+Wide Community and Ecosystem: MongoDB has an active community of users and developers. 
+It also offers a variety of complementary tools and services, such as MongoDB Atlas for cloud management.
+
+Use Cases:
+
+Web, Mobile, and Enterprise Applications: MongoDB is used in a wide range of applications, 
+including those requiring flexibility in data structure, such as web, mobile, and enterprise systems.
+
+License:
+
+Open Source License: MongoDB is licensed under the GNU Affero General Public License (AGPL). 
+
+
