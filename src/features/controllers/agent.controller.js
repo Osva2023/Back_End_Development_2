@@ -13,13 +13,23 @@ const createAgent = async(req, res) => {
 
 const sortingAgents = async(req, res) => {
     const sortedAgents = await agentSchema.find().sort({ last_name: 1 });
-    if (!sortedAgents) {
+    if (sortedAgents.length === 0) {
         return res.status(400).send({ message: 'Error sorting agents' });
     }
     return res.status(200).send({ message: 'Agents sorted successfully', data: sortedAgents });
 };
+const byratingAgents = async(req, res) => {
+    let sortedAgents = await agentSchema.find().sort({ rating: -1 });
+    const region = req.query.region;
+    sortedAgents = sortedAgents.filter((agent) => agent.region === region);
+    if (!sortedAgents) {
+        return res.status(400).send({ message: 'Error sorting agents' });
+    }
+    return res.status(200).send({ message: 'List of agents sorted by rating', data: sortedAgents });
+};
 
 module.exports = {
     createAgent,
-    sortingAgents
+    sortingAgents,
+    byratingAgents
 };
