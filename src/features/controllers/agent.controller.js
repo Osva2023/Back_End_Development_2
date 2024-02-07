@@ -57,4 +57,22 @@ const updatingAgent = async (req, res) => {
     }
 };
 
-module.exports = { createAgent, sortingAgents, byratingAgents, updatingAgent };
+    
+const deletingAgent = async (req, res) => {
+    try {
+        const deleted = await agentSchema.deleteOne({_id: req.params.id});
+        console.log(deleted);                                                    // debugging purposes
+        if (!deleted) {
+            return res.status(404).send({ message: 'Agent not found' });
+        }
+        if (deleted.deletedCount === 1) {
+            return res.status(200).send({ message: 'Agent deleted successfully' });
+        } else {
+            return res.status(400).send({ message: 'Error deleting agent' });
+        }
+    } catch (error) {
+        return res.status(500).send({ message: 'Internal server error' });
+    }
+};
+
+module.exports = { createAgent, sortingAgents, byratingAgents, updatingAgent, deletingAgent };
