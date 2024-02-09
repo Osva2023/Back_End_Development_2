@@ -19,15 +19,15 @@ const regionSchema = new mongoose.Schema({
         min: 0,
         default: 0
     },
-    manager: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Agent',      
-    }],
+    manager: {
+        type: String,
+             
+    },
 
-    top_agents: [{
+    top_agents: {
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Agent',
-    }],
+    },
 }, { timestamps: true });
 
 module.exports = mongoose.model('Region', regionSchema);

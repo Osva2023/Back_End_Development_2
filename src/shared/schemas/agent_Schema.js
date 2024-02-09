@@ -39,7 +39,15 @@ const agentSchema = new mongoose.Schema({
     },
     position: {
         type: String,
-        
+        enum: {
+            values: ['agent', 'manager'],
+            message: '{VALUE} is not a valid position'
+        },
+        default: 'agent'
+    },
+    regionRef: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Region',   
     },
     
 }, { timestamps: true });
