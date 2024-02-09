@@ -17,4 +17,3 @@ module.exports = {openMongoConnection};
 
 
 
-//'mongodb+srv://elosvadel84:Rocket_Mongo@cluster0.vj3lwcc.mongodb.net/Rocket_Elevators?retryWrites=true&w=majority')

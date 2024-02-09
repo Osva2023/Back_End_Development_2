@@ -5,7 +5,7 @@ const app = Express();
 const port = process.env.PORT || 3004;
 
 // Open MongoDB connection
-const MongoManager = require('./src/shared/resources/db/mongo-manager')
+const MongoManager = require('./src/shared/db/mongodb/mongo-manager.js')
 MongoManager.openMongoConnection();
 
 // Import routes
