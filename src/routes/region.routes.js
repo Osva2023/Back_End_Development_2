@@ -1,10 +1,10 @@
 const RegionController = require('../features/controllers/region.controller');
-const {regionMiddleware} = require('../shared/middleware/base_middleware');
+const {agentMiddleware} = require('../shared/middleware/base_middleware');
 
 const regionRoutes = (app) => {
-    app.post('/region-create', RegionController.createRegion);
-    app.get('/region', RegionController.displayRegions);
-    app.get('/all-stars', RegionController.displayAllStar);
+    app.post('/region-create', agentMiddleware, RegionController.createRegion);
+    app.get('/region', agentMiddleware, RegionController.displayRegions);
+    app.get('/all-stars', agentMiddleware, RegionController.displayAllStar);
 };
 
 module.exports = {
